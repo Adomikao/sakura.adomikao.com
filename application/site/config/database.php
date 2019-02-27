@@ -75,12 +75,12 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => '',
-	'password' => '',
-	'database' => '',
-	'dbdriver' => 'mysqli',
-	'dbprefix' => '',
+	'hostname' => DB_HOST,
+	'username' => DB_USER,
+	'password' => DB_PASS,
+	'database' => DB_NAME,
+	'dbdriver' => DB_TYPE,
+	'dbprefix' => DB_PREFIX,
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
 	'cache_on' => FALSE,
