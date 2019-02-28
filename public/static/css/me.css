@@ -1,0 +1,528 @@
+@charset "UTF-8";
+.poa-f {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+html, body {
+  background-image: url("http://adomikao.com/wp-content/uploads/2017/10/bj.png");
+}
+
+.ne-wrap {
+  position: relative;
+  width: 50%;
+  padding: 6% 1.5%;
+  min-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  font-family: Centaur, Arial, "华文中宋", "微软雅黑";
+}
+.ne-wrap .signtop {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 25px;
+  height: 20px;
+  background: url(../img/me/signtop.jpg) no-repeat center;
+}
+
+.ne-wrap .logo .tips {
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 50px;
+  color: #666;
+}
+.ne-wrap .ban {
+  padding: 60px 0 125px;
+}
+.ne-wrap .list .box {
+  float: left;
+  box-sizing: border-box;
+  padding-left: 5%;
+}
+.ne-wrap .list .box h3 {
+  padding-bottom: 15px;
+  font-size: 24px;
+  line-height: 2;
+  color: #8d8d8d;
+  font-family: Centaur, Arial;
+}
+.ne-wrap .list .box a {
+  display: inline-block;
+  width: 100%;
+  font-size: 14px;
+  line-height: 24px;
+  color: #353535;
+  font-family: "华文中宋", "微软雅黑";
+  transition: all 0.5s;
+}
+.ne-wrap .list .box a:hover {
+  color: #8d8d8d;
+}
+.ne-wrap .list .box:nth-child(1) {
+  width: 20%;
+}
+.ne-wrap .list .box:nth-child(2) {
+  width: 50%;
+}
+.ne-wrap .list .box:nth-child(3) {
+  width: 30%;
+}
+.ne-wrap .list .box:nth-child(4) {
+  float: right;
+  width: 15%;
+}
+.ne-wrap .nglist {
+  padding-top: 50px;
+}
+.ne-wrap .nglist li {
+  float: left;
+  width: 48%;
+  margin-bottom: 35px;
+}
+.ne-wrap .nglist li:nth-child(2n) {
+  float: right;
+}
+.ne-wrap .nglist li p {
+  padding-top: 10px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+  transition: color 0.5s;
+}
+.ne-wrap .nglist li:hover p {
+  color: #333;
+}
+
+.neinfo-wrap {
+  position: relative;
+  width: 85vw;
+  height: 96vh;
+  background-color: #fff;
+  margin: 2vh auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.neinfo-wrap::before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  z-index: 999;
+  width: 2px;
+  height: 100%;
+  background-color: #e3e3e3;
+  margin-left: -1px;
+}
+.neinfo-wrap .bb-item {
+  position: relative;
+  overflow: hidden;
+}
+.neinfo-wrap .part {
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+.neinfo-wrap .part .number {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  width: 20px;
+  height: 20px;
+  font: 12px/20px Arial;
+  color: #666;
+  text-align: center;
+}
+.neinfo-wrap .part.part-left {
+  box-sizing: border-box;
+  width: 50%;
+  height: 82vh;
+  padding: 0 5%;
+  margin: 8vh 0 6vh;
+}
+.neinfo-wrap .part.part-left .number {
+  bottom: calc(30px - 8vh);
+}
+.neinfo-wrap .part.part-left h3 {
+  text-align: center;
+}
+.neinfo-wrap .part.part-left h3 > a {
+  position: relative;
+  display: inline-block;
+  padding: 0 5px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 2;
+  color: #545454;
+  font-family: Centaur;
+  letter-spacing: .2em;
+  transition: all 0.5s;
+}
+.neinfo-wrap .part.part-left h3 > a:hover {
+  opacity: .75;
+}
+.neinfo-wrap .part.part-left h3 .share {
+  position: relative;
+  display: inline-block;
+  width: 15px;
+  height: 32px;
+  cursor: pointer;
+}
+.neinfo-wrap .part.part-left h3 .share::before {
+  line-height: 32px;
+  text-align: center;
+}
+.neinfo-wrap .part.part-left h3 .share .bdsharebuttonbox {
+  position: absolute;
+  left: 25px;
+  top: 2px;
+  overflow: hidden;
+  width: 0;
+  height: 28px;
+}
+.neinfo-wrap .part.part-left h3 .share.show .bdsharebuttonbox {
+  width: 78px;
+}
+.bdshare-button-style2-16 a,
+.bdshare-button-style2-16 .bds_more {
+  position: relative;
+  width: 20px;
+  height: 32px!important;
+  padding: 0!important;
+  margin: 0 3px!important;
+  background: none!important;
+  font-size: 20px!important;
+  line-height: 32px!important;
+  color: #7d7d7d!important;
+}
+.bdshare-button-style2-16 .bds_tsina {
+  font-size: 22px!important;
+}
+.neinfo-wrap .part.part-left tr.title {
+  height: 58vh;
+}
+.neinfo-wrap .part.part-left tr.title th {
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 1.5;
+  color: #333;
+  text-align: center;
+}
+.neinfo-wrap .part.part-left tr.info {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  height: 22.5vh;
+}
+.neinfo-wrap .part.part-left tr.info td {
+  position: relative;
+  float: left;
+  width: 48%;
+  height: 100%;
+  padding-right: 2%;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #666;
+}
+.neinfo-wrap .part.part-left tr.info td:nth-child(2) {
+  padding-right: 0;
+  padding-left: 2%;
+}
+.neinfo-wrap .part.part-image {
+  box-sizing: border-box;
+  padding: 5%;
+}
+.neinfo-wrap .part.part-image .in {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  font-size: 14px;
+  line-height: 30px;
+  color: #666;
+}
+.neinfo-wrap .part.part-image .in a.back {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100px;
+  height: 50px;
+  padding-left: 20px;
+  font-size: 20px;
+  line-height: 50px;
+  color: #333;
+  text-align: center;
+  margin: -25px 0 0 -60px;
+  transition: all 0.5s;
+}
+.neinfo-wrap .part.part-image .in a.back::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.5s;
+}
+.neinfo-wrap .part.part-image .in a.back:hover,
+.neinfo-wrap .part.part-image .in a.back:hover::before {
+  opacity: .8;
+}
+.neinfo-wrap .part.part-image .info {
+  padding: 0 5%;
+}
+.neinfo-wrap .part.part-image .imgbox {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 48%;
+  cursor: pointer;
+}
+.neinfo-wrap .part.part-image .imgbox:last-child {
+  margin-top: 4%;
+}
+.neinfo-wrap .part.part-image .imgbox img {
+  display: block;
+  margin: 0 auto;
+}
+.neinfo-wrap .btn {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  cursor: pointer;
+  font-size: 20px;
+  opacity: 0;
+  text-align: center;
+  color: #999;
+  transition: all 0.5s;
+}
+.neinfo-wrap .btn.prev {
+  display: none;
+}
+.neinfo-wrap .btn.next {
+  left: auto;
+  right: 0;
+}
+.neinfo-wrap .btn:hover {
+  color: #666;
+  opacity: 1 !important;
+}
+.neinfo-wrap:hover .btn {
+  opacity: .8;
+}
+.m-wrap {
+  display: none;
+  /*width: 90%;*/
+  padding: 5% 3%;
+  background-color: #fff;
+  /*margin: 2% auto;*/
+  box-shadow: 10px 10px 10px 5px rgba(0,0,0,.2);
+  font-size: 14px;
+  line-height: 2;
+  color: #666;
+}
+.m-wrap h2 {
+  /*margin-bottom: 10%;*/
+  font-size: 20px;
+  line-height: 1.5;
+  /*color: #333;*/
+  /*text-align: center;*/
+  margin: 10px 0;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 20px;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+.m-wrap .time p{
+  font-size: 13px;
+  /*margin-bottom: 10%;*/
+}
+@media all and (max-width: 812px) {
+  html, body {
+    overflow: visible!important;
+    height: auto!important;
+  }
+  .ne-wrap {
+    width: 90%;
+    min-width: 0;
+    margin-top: 5%;
+  }
+  .ne-wrap .list .box {
+    margin-bottom: 5%;
+  }
+  .ne-wrap .list .box:nth-child(2) {
+    width: 95%;
+  }
+  .ne-wrap .list .box:nth-child(3),
+  .ne-wrap .list .box:nth-child(4) {
+    width: 45%;
+  }
+  .ne-wrap .nglist li {
+    width: 100%;
+  }
+  .neinfo-wrap {
+    display: none;
+  }
+  .m-wrap {
+    display: block;
+    z-index: 10;
+    position: relative;
+  }
+  .m-wrap img {
+    max-width: 100%;
+    margin: 10px auto;
+  }
+}
+
+.out-image {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  background-color: #000;
+  user-select: none;
+}
+.out-image .loader.white {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.8);
+}
+.out-image a.logo {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  left: 30px;
+  top: 35px;
+  width: 70px;
+}
+.out-image a.close {
+  display: block;
+  position: absolute;
+  right: 30px;
+  top: 35px;
+  z-index: 2;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #333;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.5s;
+}
+.out-image a.close::before {
+  font-size: 20px;
+  line-height: 36px;
+  color: #fff;
+}
+.out-image a.close:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.out-image .scroll {
+  display: none;
+  position: absolute;
+  left: 10%;
+  top: 0;
+  width: 80%;
+  height: 100%;
+  overflow: hidden;
+}
+.out-image .scroll li {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.out-image .scroll li img {
+  position: relative;
+}
+.out-image .scroll li.left {
+  left: 0;
+}
+.out-image .btn {
+  position: absolute;
+  top: 25%;
+  width: 80px;
+  height: 50vh;
+  text-align: center;
+  cursor: pointer;
+}
+.out-image .btn::before {
+  position: relative;
+  z-index: 2;
+  font-size: 25px;
+  line-height: 50vh;
+  color: #fff;
+}
+.out-image .btn.left {
+  left: 0;
+}
+.out-image .btn.next {
+  right: 0;
+}
+
+/**设置雪花为全局**/
+body>.snow {
+    left: 0;
+    pointer-events: none
+}
+body>.snow {
+    position: fixed;
+    display: block;
+    z-index: 1000;
+    top: 0
+}
+
+/*--弹窗样式--*/
+
+
+.popup{
+	width:280px;
+	height:auto;
+	background-color:#fff;
+	position:absolute;
+	z-index:100;
+	border:1px solid #ebeaea;
+	left:400px;
+	top:96px;
+	display:none;
+}
+.popup .top_nav{
+	width:280px;
+	height:46px;
+	position:relative;
+}
+.popup .top_nav i{width:35px;height:35px;position:absolute;top:6px;left:8px;display:block; }
+.popup .top_nav span{font:18px/18px 'microsoft yahei';display:block;position:absolute;top:13px;left:50px;}
+
+.popup .top_nav a.guanbi { width:16px; height: 16px; display: block; position:absolute;top:10px;right:10px;cursor:pointer;}
+.popup .top_nav a.guanbi span { display: none;}
+.popup .min{width:260px;height:auto;padding:10px;}
+
+/** 圣诞帽 **/
+.hat11{
+  content: "";
+  width: 24px;
+  height: 24px;
+  float: right;
+  right: 100px;
+  background: url(../img/me/santa-hat.svg) no-repeat;
+  background-size: 24px;
+  padding: 6% 1.5%;
+  display: inline;
+}
+
+.music-icon .iconfont {
+  color: #FFFFFF;
+  font-size: 64px;
+  line-height: 1;
+}

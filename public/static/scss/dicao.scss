@@ -1,0 +1,170 @@
+@charset "utf-8";
+@import "mixinboc";
+@import "sasscore/setting";
+@import "sasscore/css3";
+@import "sasscore/media";
+@import "sasscore/mixin";
+
+@font-face {
+ font-family: 'raleway';
+ src: url('../font/raleway.eot');
+ src: local('raleway Regular'),
+        local('raleway'),
+        url('../font/raleway.woff') format('woff'),
+        url('../font/raleway.ttf') format('truetype'),
+        url('../font/raleway.svg#raleway') format('svg');
+}
+
+html, body {
+	position: relative;
+	overflow: hidden;
+	height: 100vh;
+	min-width: auto;
+	@include max-screen(828px) {
+		height: auto;
+		overflow: auto;
+	}
+}
+.dicao-wrap {
+	.side {
+		float: left;
+		width: 160px;
+		height: 100vh;
+		font: 14px/2 'raleway', Arial, sans-serif;
+		a {
+			color: #333;
+			@include max-screen(828px) {
+				padding: 10px;
+			}
+		}
+	}
+	.images {
+		position: relative;
+		float: right;
+		width: calc(100% - 160px);
+		height: 100vh;
+		overflow: hidden;
+		.grid {
+			position: relative;
+			width: 100%;
+			.grid-item {
+				position: absolute;
+				opacity: 0;
+				width: calc(24.2% - 30px);
+				border-radius: 3px;
+				background-color: #536DFE;
+				cursor: pointer;
+				@include max-screen(1200px) {
+					width: calc(32% - 30px);
+				}
+				@include max-screen(828px) {
+					position: relative;
+					width: calc(100% - 20px);
+					margin: 20px 10px;
+					opacity: 1;
+				}
+			}
+		}
+	}
+	@include max-screen(828px) {
+		.side {
+			float: none;
+			width: 100%;
+			height: auto;
+		}
+		.images {
+			float: none;
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+.out-images {
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 10;
+	width: 100vw;
+	height: 100vh;
+	user-select: none;
+	.bg {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(255,255,255, .95);
+	}
+	.main {
+		position: absolute;
+		left: 10%;
+		top: 0;
+		width: 80%;
+		height: 100vh;
+		overflow: hidden;
+		li {
+			position: absolute;
+			left: 100%;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			img {
+				position: absolute;
+			}
+		}
+	}
+	.btn {
+		position: absolute;
+		top: 0;
+		width: 5%;
+		height: 100vh;
+		cursor: pointer;
+		&::before {
+			position: absolute;
+			display: block;
+			width: 100%;
+			top: 50%;
+			font-size: 30px;
+			line-height: 200px;
+			text-align: center;
+			margin-top: -100px;
+			@include tf;
+		}
+		&:hover::before {
+			background-color: rgba(0,0,0,.2);
+		}
+		&.prev {
+			left: 0;
+		}
+		&.next {
+			right: 0;
+		}
+	}
+	.close {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 40px;
+		height: 40px;
+		font-size: 20px;
+		line-height: 2;
+		text-align: center;
+		color: #000;
+		cursor: pointer;
+	}
+	.share {
+		position: absolute;
+		right: 40px;
+		top: 0;
+		width: 40px;
+		height: 40px;
+		font-size: 20px;
+		line-height: 2;
+		text-align: center;
+		color: #000;
+		cursor: pointer;
+		transform: rotateY(180deg);
+	}
+}

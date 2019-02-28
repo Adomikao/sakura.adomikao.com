@@ -1,0 +1,9 @@
+body {
+    background: url("../img/bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+#body-main-login .boxed {
+    background-color:unset;
+}
+
