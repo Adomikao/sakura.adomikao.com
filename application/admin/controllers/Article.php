@@ -63,7 +63,7 @@ class Article extends CRUD_Controller
             )
         );
     }
-
+-
     public function index($page = 1)
     {
         $vdata['title'] = '文章管理';
