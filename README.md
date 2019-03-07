@@ -15,10 +15,5 @@ Sakura is a beautiful blog to record the nice anime with essay and anime picture
     <img src="doc/2019-03-06_114645.png" >
 </div>
 
-## video
-<div align="center">
-    <video src="doc/Video_2019-03-06_114839.mp4">
-</div>
-
 ## license
 [Apache License, Version 2.0.](http://www.apache.org/licenses/LICENSE-2.0.html)
