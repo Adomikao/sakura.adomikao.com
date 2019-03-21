@@ -17,26 +17,27 @@ define('DB_PREFIX','qaq_');
 
 //全局URL路径
 define('GLOBAL_URL', 'qaq.sakura.com');
+define('ADMINER_URL', GLOBAL_URL . 'moon/');
 define('STATIC_URL', GLOBAL_URL . 'public/static/');
 define('UPLOAD_URL', GLOBAL_URL . 'public/upload/');
-define('IMG_URL',  STATIC_URL . 'img/');
-define('ADMIN_IMG_URL', STATIC_URL . 'admin/img');
+define('IMG_URL', STATIC_URL . 'img/');
+define('ADMINER_IMG_URL', STATIC_URL . 'adminer/img');
 
 
 
 // 绝对路径PATH
 define('ROOT', __DIR__ . '/');
 define('CI_PATH', ROOT . 'system');
-define('SITE_PATH', ROOT . 'application/site/');
 define('STATIC_PATH', ROOT . 'public/static/');
-define('UPLOAD_PATH', ROOT . 'public/upload');
+define('UPLOAD_PATH', ROOT . 'public/upload/');
+define('SITE_PATH', ROOT . 'application/site');
+define('ADMIN_PATH', ROOT . 'application/admin');
+# 可忽略 当css|js改变时替换本地缓存,将false 替换为 'v[1,2...]'
+define('STATIC_V', 'v1');
 
+define('HMACPWD', 'SA1S2D3F4G5H6J7K8L9');
 
-
-
-
-
-
+//define('ENVIRONMENT', 'production');
 define('ENVIRONMENT', 'development');
 
 
