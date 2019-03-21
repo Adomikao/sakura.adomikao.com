@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /moon/index.php/$1 [L]
+
+#若你的项目名为：TestCI 则此处应为RewriteRule ^(.*)$ /TestCI/index.php/$1 [L]
+</IfModule>
