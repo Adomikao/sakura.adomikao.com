@@ -1,75 +1,110 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: yuyongjian
- * Date: 2019/2/27
- * Time: 16:35
- */
-
-if (!function_exists('static_file')){
+if (!function_exists('static_file')) {
     function static_file($file, $addition = false)
     {
         if (empty($file)) {
             return '';
         }
-        if (strpos($file, '.js')){
-            $fileMin = str_replace('.js','.min.js', $file);
+        if (strrpos($file, '.js')) {
+            $fileMin = str_replace('.js', '.min.js', $file);
             $type = 'js/';
-        }elseif (strpos($file, '.css')){
+        } else if (strrpos($file, '.css')) {
             $fileMin = str_replace('.css', '.min.css', $file);
             $type = 'css/';
-        }else{
-            $fileMin = '';
+        } else {
             $type = '';
+            $fileMin = '';
         }
 
         $url = '';
-        if (is_file(STATIC_PATH . $file)){
+        if (is_file(STATIC_PATH . $file)) {
             $url = STATIC_URL . $file;
         }
 
-        if (!empty($type)){
-            if (file_exists(STATIC_URL . $type . $file)){
-                $url = STATIC_URL .$type .$file;
+        if (!empty($type)) {
+            if (file_exists(STATIC_PATH . $type . $file)) {
+                $url = STATIC_URL . $type . $file;
             }
-            if (define('ENVIRONMENT') && ENVIRONMENT !== 'development'){
-                if (file_exists(STATIC_URL . $type . $fileMin)){
-                    $url = STATIC_URL . $type .$fileMin;
+            if (defined('ENVIRONMENT') && ENVIRONMENT != "development") {
+                if (file_exists(STATIC_PATH . $type . $fileMin)) {
+                    $url = STATIC_URL . $type . $fileMin;
                 }
-                if (empty($url) && file_exists(STATIC_URL . $file)){
+                if (empty($url) && file_exists(STATIC_PATH . $file)) {
                     $url = STATIC_URL . $file;
                 }
             }
         }
 
-        if (empty($url)){
-            return '<script>console.error("cannot find`'.$file.'`!")</script>';
-        }else{
-            if (defined('STATIC_V') && STATIC_V){
+        if (empty($url)) {
+            return '<!-- static file error: ' . $file . ' cannot find. --><script>console.error("cannot find `' . $file . '`!")</script>';
+        } else {
+            if (defined('STATIC_V') && STATIC_V) {
                 $url .= '?v=' . STATIC_V;
             }
+            /*            if (defined('ENVIRONMENT') and ENVIRONMENT == "development") {
+                            $url .= '?t=' . time();
+                        }*/
         }
 
-        if ($addition === true){
+        if ($addition === true) {
             return $url;
         } else {
-            if ($type == 'js/'){
-                return '<script src="'.$url.'" type="text/javascript" charset="utf-8"></script>';
-            } elseif ($type == 'css/'){
+            if ($type == 'js/') {
+                return '<script src="' . $url . '" type="text/javascript" charset="utf-8"></script>';
+            } else if ($type == 'css/') {
                 $media = in_array($addition, array('screen', 'print')) ? $addition : 'screen';
                 return '<link rel="stylesheet" href="' . $url . '" type="text/css" media="' . $media . '" charset="utf-8">';
-            } else{
+            } else {
                 return $url;
             }
         }
     }
-
 }
 
+if (!function_exists('return_json')) {
+    function return_json($data = [], $status = 1, $msg = '')
+    {
+        echo json_encode(['data' => $data, 'status' => $status, 'msg' => $msg]);
+        return true;
+    }
+}
 
-if (!function_exists('upload_file')){
-    function upload_file($url){
-        return UPLOAD_URL . $url;
+if (!function_exists('is_mobile')) {
+    function is_mobile($mobile)
+    {
+        if (preg_match('/^1[3456789]\d{9}$/', $mobile)) {
+            return true;
+        }
+        return false;
+    }
+}
+
+if (!function_exists('is_email')) {
+    function is_email($email)
+    {
+        if (preg_match('/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix', $email)) {
+            return true;
+        }
+        return false;
+    }
+}
+
+if (!function_exists('get_client_ip')) {
+    function get_client_ip()
+    {
+        if (!empty($_SERVER["HTTP_CLIENT_IP"])) {
+            $ip = $_SERVER["HTTP_CLIENT_IP"];
+        } else if (!empty($_SERVER["HTTP_X_FORWARDED_FOR"])) {
+            $ip = $_SERVER["HTTP_X_FORWARDED_FOR"];
+        } else if (!empty($_SERVER["REMOTE_ADDR"])) {
+            $ip = $_SERVER["REMOTE_ADDR"];
+        } else {
+            $ip = '';
+        }
+        preg_match("/[\d\.]{7,15}/", $ip, $ips);
+        $ip = isset($ips[0]) ? $ips[0] : 'unknown';
+        unset($ips);
+        return $ip;
     }
 }
 
@@ -82,6 +117,14 @@ function obj_hashids($salt = 'adomikao', $length = 9, $alphabet = '')
     $CI->load->library('hashids');
     return new Hashids($salt, $length, $alphabet);
 }
+
+if (!function_exists('upload_file')) {
+    function upload_file($url)
+    {
+        return UPLOAD_URL . $url;
+    }
+}
+
 
 if (!function_exists('weibo_share')) {
 
