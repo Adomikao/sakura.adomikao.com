@@ -16,7 +16,7 @@ define('DB_PREFIX','qaq_');
 
 
 //全局URL路径
-define('GLOBAL_URL', 'qaq.sakura.com');
+define('GLOBAL_URL'  , 'http://'.$_SERVER['HTTP_HOST'].'/');
 define('ADMINER_URL', GLOBAL_URL . 'moon/');
 define('STATIC_URL', GLOBAL_URL . 'public/static/');
 define('UPLOAD_URL', GLOBAL_URL . 'public/upload/');
