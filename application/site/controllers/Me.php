@@ -1,22 +1,16 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: yuyongjian
- * Date: 2019/2/27
- * Time: 11:34
- */
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Me extends Common_Controller
 {
     public $defaultLogo;
     public $defaultCover;
 
-    public  function  __construct()
+    public function __construct()
     {
         parent::__construct();
         $this->defaultLogo = static_file('img/me/logo.png');
-        $this->defaultCover = static_file('img/me/cover.png');
-
+        $this->defaultCover = static_file('img/me/ban.jpg');
     }
 
     public function index()
@@ -24,15 +18,15 @@ class Me extends Common_Controller
         //首页封面和logo
         $index = $this->db->where('admin_id', 3)->select("id,logo,cover,tag,link")->get('index')->row_array();
         $index['logo'] = empty($index['logo']) ? $this->defaultLogo : upload_file(tag_photo($index['logo']));
-        $index['cover'] = empty($index['cover']) ? $this->defaultLogo : upload_file(tag_photo($index['cover']));
+        $index['cover'] = empty($index['cover']) ? $this->defaultCover : upload_file(tag_photo($index['cover']));
         $index['link'] = json_decode($index['link'], true);
-
+        $data['index'] = $index;
         //文章列表
         $article = $this->db->where('admin_id', 3)->order_by('id', 'DESC')->select("id,title,tag,FROM_UNIXTIME(create_time,'%Y%m') months")->get('article')->result_array();
+    
         $tag = array();
         $dateList = [];
         $tagName = [];
-
         foreach ($article as $val) {
             $month = date('Y年m月', strtotime($val['months'] . '01'));
             $dateList[$month][] = $val;
@@ -87,7 +81,7 @@ class Me extends Common_Controller
             }
             $data['nglist'] = $articleList;
             $data['search'] = $tagName;
-
+        
             $this->load->view('list', $data);
         }
     }
@@ -98,7 +92,7 @@ class Me extends Common_Controller
         if (empty($id)){
             redirect(site_url(''));
         }
-        $article = $this->db->where('id', $id)->select('title,intro_left,intro_right,photo,music,image,tag,text,create_time')->get('article')->row_array();
+        $article = $this->db->where('id', $id)->select('title,intro_left,intro_right,music,photo,image,tag,text,create_time')->get('article')->row_array();
         if (empty($article)) {
             redirect(site_url(''));
         }
@@ -147,6 +141,4 @@ class Me extends Common_Controller
         $article['wechat_share'] = $qr_code;
         $this->load->view('info', $article);
     }
-
-
 }
