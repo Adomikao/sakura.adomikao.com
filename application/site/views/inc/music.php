@@ -1,8 +1,8 @@
 <style>
     #music #audio-btn{width: 35px;height: 35px; background-size: 100% 100%;position: fixed;  right: 3%;
-        top: 3%; z-index: 19;  }
+        top: 3%; z-index: 19;}
     #music .on{background: url(<?php echo IMG_URL .'me/music_02.ico';?>) no-repeat 0 0;-webkit-animation: rotating 1.5s linear infinite;animation: rotating 1.5s linear infinite;}
-    #music .off{background: url(<?php echo IMG_URL .'me/music_02.ico';?>) no-repeat 0 0; }
+    #music .off{background: url(<?php echo IMG_URL .'me/music_02.ico';?>) no-repeat 0 0;}
     @-webkit-keyframes rotating {
         from{
             -webkit-transform: rotate(0deg);
@@ -38,13 +38,13 @@
 </style>
 <!--代码部分begin-->
 <div id="music">
-    <div id="audio-btn" class="off" onclick="music.changeClass(this,'media')">
-        <audio loop="loop" src="<?php echo UPLOAD_URL ."music/{$music}.mp3";?>" id="media" preload="preload"></audio>
+    <div id="audio-btn" class="on" onclick="music.changeClass(this,'media')">
+        <audio  loop="loop" src="<?php echo UPLOAD_URL ."music/{$music}.mp3";?>" id="media" preload=""></audio>
     </div>
 </div>
 <script>
     document.getElementById('media').load();
-    document.getElementById('media').play();
+    // document.getElementById('media').play();
     var music = {
         changeClass: function (target,id) {
             var className = $(target).attr('class');
@@ -57,7 +57,6 @@
                 : ids.play();
         },
         play:function(){
-            document.getElementById('media').load();
             document.getElementById('media').play();
         }
     }
