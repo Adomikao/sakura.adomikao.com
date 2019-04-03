@@ -1,5 +1,5 @@
 <canvas id = 'c' style="position: fixed;"></canvas>
-<div id = 'branch' style="width: 1200px; height: 422px;  position: fixed; background: url(http://trabajando.unpocodetodo.info/images/branch.gif) no-repeat"></div>
+<div id = 'branch' style="width: 1200px; height: 422px;  position: fixed; background: url(<?php echo UPLOAD_URL.'branch.gif';?>) no-repeat"></div>
 <script>
     var c = document.getElementById("c");
     var ctx = c.getContext("2d");
@@ -156,4 +156,3 @@
 
     window.addEventListener("load", init, false);
 </script>
-
