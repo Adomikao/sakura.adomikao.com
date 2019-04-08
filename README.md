@@ -12,7 +12,7 @@ Sakura is a beautiful blog to record the nice anime with essay and anime picture
 
 ## show
 <div align="center">
-    <img src="doc/2019-03-06_114645.png" >
+    <a href="doc/2019-03-06_114645.png" target="_blank"><img src="doc/2019-03-06_114645.png" ></a>
 </div>
 
 ## content
