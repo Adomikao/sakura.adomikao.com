@@ -1,6 +1,6 @@
 <br/>
 <div align="center">
-    <img src="doc/LogoMakr_5gs4TL.png" width="700px">
+    <a href="https://sakura.adomikao.com/doc/LogoMakr_5gs4TL.png" target="_blank"><img src="doc/LogoMakr_5gs4TL.png" width="700px"></a>
 </div>
 
 <div id="" align="center">
@@ -12,7 +12,7 @@ Sakura is a beautiful blog to record the nice anime with essay and anime picture
 
 ## show
 <div align="center">
-    <a href="doc/2019-03-06_114645.png" target="_blank"><img src="doc/2019-03-06_114645.png" ></a>
+    <a href="https://sakura.adomikao.com/doc/2019-03-06_114645.png" target="_blank"><img src="doc/2019-03-06_114645.png" ></a>
 </div>
 
 ## content
