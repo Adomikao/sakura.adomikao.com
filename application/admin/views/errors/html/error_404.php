@@ -1,64 +1,78 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>404 Page Not Found</title>
-<style type="text/css">
-
-::selection { background-color: #E13300; color: white; }
-::-moz-selection { background-color: #E13300; color: white; }
-
-body {
-	background-color: #fff;
-	margin: 40px;
-	font: 13px/20px normal Helvetica, Arial, sans-serif;
-	color: #4F5155;
-}
-
-a {
-	color: #003399;
-	background-color: transparent;
-	font-weight: normal;
-}
-
-h1 {
-	color: #444;
-	background-color: transparent;
-	border-bottom: 1px solid #D0D0D0;
-	font-size: 19px;
-	font-weight: normal;
-	margin: 0 0 14px 0;
-	padding: 14px 15px 10px 15px;
-}
-
-code {
-	font-family: Consolas, Monaco, Courier New, Courier, monospace;
-	font-size: 12px;
-	background-color: #f9f9f9;
-	border: 1px solid #D0D0D0;
-	color: #002166;
-	display: block;
-	margin: 14px 0 14px 0;
-	padding: 12px 10px 12px 10px;
-}
-
-#container {
-	margin: 10px;
-	border: 1px solid #D0D0D0;
-	box-shadow: 0 0 8px #D0D0D0;
-}
-
-p {
-	margin: 12px 15px 12px 15px;
-}
-</style>
-</head>
-<body>
-	<div id="container">
-		<h1><?php echo $heading; ?></h1>
-		<?php echo $message; ?>
-	</div>
-</body>
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>404 Page Not Found</title>
+<style type="text/css">
+    /* Styles of the 404 page of my website. */
+
+    body {
+        background: #081421;
+        color: #d3d7de;
+        font-family: "Courier new";
+        font-size: 18px;
+        line-height: 1.5em;
+        cursor: default;
+    }
+
+    a {
+        color: #fff;
+    }
+
+    .code-area {
+        position: absolute;
+           width: 320px;
+        min-width: 320px;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .code-area > span {
+        display: block;
+    }
+
+    @media screen and (max-width: 320px) {
+        .code-area {
+            font-size: 5vw;
+            min-width: auto;
+            width: 95%;
+            margin: auto;
+            padding: 5px;
+            padding-left: 10px;
+            line-height: 6.5vw;
+        }
+    }
+
+</style>
+</head>
+<body>
+<div class="code-area">
+  <span style="color: #777;font-style:italic;">
+    // 404 page not found.
+  </span>
+    <span>
+    <span style="color:#d65562;">
+      if
+    </span>
+	  (<span style="color:#4ca8ef;">!</span><span style="font-style: italic;color:#bdbdbd;">found</span>)
+    {
+  </span>
+    <span>
+    <span style="padding-left: 15px;color:#2796ec">
+       <i style="width: 10px;display:inline-block"></i>throw
+    </span>
+    <span>
+      (<span style="color: #a6a61f">"(╯°□°)╯︵ ┻━┻"</span>);
+    </span>
+	  <span style="display:block">}</span>
+	  <span style="color: #777;font-style:italic;">
+		  // <a href="/moon/login">Go home!</a>
+	  </span>
+  </span>
+</div>
+</body>
 </html>
