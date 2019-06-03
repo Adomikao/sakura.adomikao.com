@@ -17,6 +17,8 @@ Sakura is a beautiful blog to record the nice anime with essay and anime picture
 
 ## content
 
+- [狼与香辛料](https://sakura.adomikao.com/me/aimer/d0xz8l9ln)
+
 - [我想吃掉你的胰脏](https://sakura.adomikao.com/me/aimer/b0y2eq2px)
 
 - [言葉の庭](https://sakura.adomikao.com/me/aimer/vjgzjq9we)
