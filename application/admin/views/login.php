@@ -11,9 +11,9 @@
     <link rel="shortcut icon" href="<?php echo IMG_URL; ?>icon.png" type="image/x-icon"/>
     <link rel="canonical" href="/"/>
     <meta name="author" content="余永健 | Adomikao-https://adomikao.com/"/>
-    <link rel="shortcut icon" href="https://adomikao.com/wp-content/uploads/2016/08/cropped-snow_70.912386706949px_1196812_easyicon.net_-1.png" type="image/png">
-
     <meta name="robots" content="deny"/>
+    <link rel="shortcut icon" href="https://adomikao.com/wp-content/uploads/2017/12/red.png" type="image/png">
+
     <script type="text/javascript" charset="utf-8">
         //  初始化路径
         var STATIC_URL = "<?php echo STATIC_URL?>";
@@ -42,17 +42,17 @@
             echo form_open($sub_url, array("class" => "form-horizontal", "id" => "frm-login"));
             ?>
             <div class="boxed-inner seamless">
-                <h3 style="padding:20px 0 0 27px;"><i class="fa fa-leaf"></i> LOGIN </h3>
+                <h3 style="padding:20px 0 0 27px;"><i class="fa fa-leaf"></i> LOGIN  </h3>
                 <div class="control-group">
                     <div class="input-prepend">
-                        <span class="add-on"><i class="fa fa-user"></i></span>
+                        <span class="add-on"><i class="fa fa-user-md"></i></span>
                         <input type="text" name="uname" value="<?php echo set_value('uname') ?>" id="uname"
                                placeholder="<?php echo lang('member') ?>" required="required">
                     </div>
                 </div>
                 <div class="control-group">
                     <div class="input-prepend">
-                        <span class="add-on"><i class="fa fa-lock"></i></span>
+                        <span class="add-on"><i class="fa fa-pied-piper-alt"></i></span>
                         <input type="password" name="pwd" id="pwd" placeholder="<?php echo lang('password') ?>"
                                required/>
                     </div>
@@ -98,7 +98,7 @@
                 <a id="btn-getpass" href="#" class="add-on btn btn-success"> <i
                             class="fa fa-key"></i> <?php echo lang('password_get') ?> </a>
                 <a id="btn-login" href="#" class="pull-right" style="padding-top:5px;"> <?php echo lang('login') ?> <i
-                            class="fa fa-pied-piper-alt"></i> </a>
+                            class="fa fa fa-leaf"></i> </a>
             </div>
             <p></p>
             <div id="pass-msg" class="alert alert-error hide">
