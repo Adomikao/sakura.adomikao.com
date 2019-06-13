@@ -3,15 +3,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Common_Controller extends CI_Controller
 {
-    public $seoTitle = 'Sakura | Adomikao';
+    public $seoTitle = 'QAQ | Adomikao';
     public function __construct()
     {
         parent::__construct();
         $this->load->helper('uisite');
         $this->load->model('category_model', 'category');
         $this->load->model('image_model', 'image');
-        
-        ini_set('date.timezone','Asia/Shanghai');// 设置时区
         
         //隐藏X-Powered-By
         if (function_exists('header_remove')) {
