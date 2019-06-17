@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: yuyongjian
- * Date: 2019/2/27
- * Time: 17:49
- */
 
 // 获取图片
 if (!function_exists('tag_photo')) {
@@ -29,4 +23,13 @@ if (!function_exists('tag_photo')) {
         }
         return '';
     }
+}
+
+function goto_message($message, $uri = -1, $toSiteUrl = true)
+{
+    $message = addslashes($message);
+    if (is_int($uri)) $uri = 'history.go(' . $uri . ');';
+    else if ($toSiteUrl) $uri = 'location.href="' . site_url($uri) . '";';
+    header("Content-type:text/html;Charset=utf-8");
+    exit('<script>alert("' . $message . '");' . $uri . '</script>');
 }
