@@ -63,7 +63,7 @@ class Article extends CRUD_Controller
             )
         );
     }
--
+
     public function index($page = 1)
     {
         $vdata['title'] = '文章管理';
@@ -78,7 +78,6 @@ class Article extends CRUD_Controller
             $item['photo'] = upload_file($upload['url']);
         }
         $vdata['list'] = $list;
-
         $this->_display($vdata);
     }
 
@@ -93,6 +92,7 @@ class Article extends CRUD_Controller
         $data = $this->input->post();
         $data['admin_id'] = $_SESSION['mid'];
         $data['create_time'] = time();
+        $data['update_time'] = time();
         $data['tag'] = !empty($data['tag']) ? implode(',', $data['tag']) : '';
         $data['intro_left'] = str_replace("\n", "<br>", $data['intro_left']);
         $data['intro_right'] = str_replace("\n", "<br>", $data['intro_right']);
