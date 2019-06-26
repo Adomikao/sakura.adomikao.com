@@ -36,16 +36,6 @@
         </li>
 
         <li class="js-sidebar-cog">
-            <a href="<?php echo site_url('music') ?>">
-                <i class="fa fa-music" title="<?php echo '音乐管理' ?>"></i>
-                <span class="i-title"><?php echo '音乐管理' ?></span>
-                <div class="wp-menu-arrow">
-                    <div></div>
-                </div>
-            </a>
-        </li>
-
-        <li class="js-sidebar-cog">
             <a href="<?php echo site_url('index') ?>">
                 <i class="fa fa-cog" title="首页配置"></i>
                 <span class="i-title">首页配置</span>
