@@ -15,7 +15,6 @@ class Me extends Common_Controller
 
     public function index()
     {
-
         //首页封面和logo
         $index = $this->db->where('admin_id', 3)->select("id,logo,cover,tag,link")->get('index')->row_array();
         $index['logo'] = empty($index['logo']) ? $this->defaultLogo : upload_file(tag_photo($index['logo']));
@@ -24,10 +23,10 @@ class Me extends Common_Controller
         $data['index'] = $index;
         //文章列表
         $article = $this->db->where('admin_id', 3)->order_by('id', 'DESC')->select("id,title,tag,FROM_UNIXTIME(create_time,'%Y%m') months")->get('article')->result_array();
+    
         $tag = array();
         $dateList = [];
         $tagName = [];
-
         foreach ($article as $val) {
             $month = date('Y年m月', strtotime($val['months'] . '01'));
             $dateList[$month][] = $val;
@@ -42,6 +41,10 @@ class Me extends Common_Controller
         $data['article'] = array_slice($article, 0, 5);
         $data['tagName'] = $tagName;
         $data['date'] = $dateList;
+    
+        
+
+
         $this->load->view('me', $data);
     }
 
@@ -93,7 +96,7 @@ class Me extends Common_Controller
         if (empty($id)){
             redirect(site_url(''));
         }
-        $article = $this->db->where('id', $id)->select('title,intro_left,intro_right,photo,music,image,tag,text,create_time')->get('article')->row_array();
+        $article = $this->db->where('id', $id)->select('title,intro_left,intro_right,music,photo,image,tag,text,create_time,update_time')->get('article')->row_array();
         if (empty($article)) {
             redirect(site_url(''));
         }
