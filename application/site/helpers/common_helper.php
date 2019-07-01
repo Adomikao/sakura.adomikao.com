@@ -108,13 +108,6 @@ if (!function_exists('get_client_ip')) {
     }
 }
 
-if (!function_exists('upload_file')) {
-    function upload_file($url)
-    {
-        return UPLOAD_URL . $url;
-    }
-}
-
 /**
  *  获取Hashids对象
  */
@@ -125,6 +118,17 @@ function obj_hashids($salt = 'adomikao', $length = 9, $alphabet = '')
     return new Hashids($salt, $length, $alphabet);
 }
 
+if (!function_exists('upload_file')) {
+    function upload_file($url)
+    {
+        if(IS_GITEE){
+            return GITEE_SAKURA_URL . $url;
+        }else{
+            return UPLOAD_URL . $url;
+        }
+        
+    }
+}
 if (!function_exists('weibo_share')) {
 
     function weibo_share($url,$title,$pic){
