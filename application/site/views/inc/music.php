@@ -38,10 +38,13 @@
 </style>
 <!--代码部分begin-->
 <div id="music">
-    <div id="audio-btn" class="on" onclick="music.changeClass(this,'media')">
-        <audio  loop="loop" src="<?php echo UPLOAD_URL ."music/{$music}.mp3";?>" id="media" preload=""></audio>
+
+<!-- <img id="music" src="http://sakura.adomikao.cc/public/static/img/me/music_02.ico"> -->
+<div id="audio-btn" class="on" onclick="music.changeClass(this,'media')">
+        <!-- <audio  loop="loop" src="<?php echo UPLOAD_URL ."music/{$music}.mp3";?>" id="media" preload=""></audio> -->
+        <audio  loop="loop" src="<?php echo GITEE_SAKURA_URL ."music/{$music}.mp3";?>" id="media" preload=""></audio>
     </div>
-</div>
+
 <script>
     document.getElementById('media').load();
     // document.getElementById('media').play();
