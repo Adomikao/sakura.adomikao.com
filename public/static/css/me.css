@@ -7,14 +7,63 @@
   height: 100%;
 }
 
+@font-face {
+  font-family: "华文中宋";
+  src: url(../font/华文中宋.ttf);
+  /* src: local('华文中宋'), local('华文中宋'), url(../font/华文中宋.ttf); */
+}
+
+@font-face {
+  font-family: "瘦金体";
+  src: url(../font/瘦金体.ttf);
+  /* src: local('华文中宋'), local('华文中宋'), url(../font/华文中宋.ttf); */
+}
+
+@font-face {
+  font-family: satisfy;
+  font-style: normal;
+  font-weight: 400;
+  src: local('satisfy'), local('satisfy'), url(../font/satisfy.woff) format('woff')
+}
+
+@font-face{
+  font-family:'HuaweiFont-Regular';
+  src:url('../font/HuaweiFont-Regular.woff2') format('woff2'),
+ url('../font/HuaweiFont-Regular.woff') format('woff'),
+ url('../font/HuaweiFont-Regular.otf') format('opentype');
+  font-style:normal;
+  font-weight:500
+}
+
+
+
+
+
+.hwzs{
+  font-family: "华文中宋";
+}
+.sjt{
+  font-family: "瘦金体";
+}
+
 html, body {
-  background-image: url("http://adomikao.com/wp-content/uploads/2017/10/bj.png");
+  /*background-color: #878787;*/
+background-image: url("/public/upload/bj.png");
+}
+
+a{
+  color: #353535;
+}
+
+.f_logo{
+  font: normal 20px 'satisfy', 'Helvetica Neue', Helvetica, Arial;
 }
 
 .ne-wrap {
   position: relative;
   width: 50%;
-  padding: 6% 1.5%;
+  padding: 3% 0.7%;
+  padding-top: 40px;
   min-width: 800px;
   margin: 0 auto;
   background-color: #fff;
@@ -36,7 +85,7 @@ html, body {
   color: #666;
 }
 .ne-wrap .ban {
-  padding: 60px 0 125px;
+   padding: 30px 0 75px;
 }
 .ne-wrap .list .box {
   float: left;
@@ -48,7 +97,7 @@ html, body {
   font-size: 24px;
   line-height: 2;
   color: #8d8d8d;
-  font-family: Centaur, Arial;
+  font-family: satisfy;
 }
 .ne-wrap .list .box a {
   display: inline-block;
@@ -66,14 +115,14 @@ html, body {
   width: 20%;
 }
 .ne-wrap .list .box:nth-child(2) {
-  width: 50%;
+  width: 25%;
 }
 .ne-wrap .list .box:nth-child(3) {
-  width: 30%;
+  width: 25%;
 }
 .ne-wrap .list .box:nth-child(4) {
   float: right;
-  width: 15%;
+  width: 30%;
 }
 .ne-wrap .nglist {
   padding-top: 50px;
@@ -211,12 +260,14 @@ html, body {
   line-height: 1.5;
   color: #333;
   text-align: center;
+
 }
 .neinfo-wrap .part.part-left tr.info {
   display: inline-block;
   position: relative;
   overflow: hidden;
   height: 22.5vh;
+
 }
 .neinfo-wrap .part.part-left tr.info td {
   position: relative;
@@ -227,6 +278,7 @@ html, body {
   font-size: 14px;
   line-height: 1.5;
   color: #666;
+
 }
 .neinfo-wrap .part.part-left tr.info td:nth-child(2) {
   padding-right: 0;
@@ -324,6 +376,7 @@ html, body {
   font-size: 14px;
   line-height: 2;
   color: #666;
+  /* font-family: "华文中宋"; */
 }
 .m-wrap h2 {
   /*margin-bottom: 10%;*/
@@ -340,9 +393,11 @@ html, body {
 }
 .m-wrap .time p{
   font-size: 13px;
-  /*margin-bottom: 10%;*/
+  margin-bottom: 10%;
 }
+
 @media all and (max-width: 812px) {
+
   html, body {
     overflow: visible!important;
     height: auto!important;
@@ -355,12 +410,17 @@ html, body {
   .ne-wrap .list .box {
     margin-bottom: 5%;
   }
+
+  .ne-wrap .list .box:nth-child(1) {
+    width: 50%;
+  }
+
   .ne-wrap .list .box:nth-child(2) {
     width: 95%;
   }
   .ne-wrap .list .box:nth-child(3),
   .ne-wrap .list .box:nth-child(4) {
-    width: 45%;
+    width: 100%;
   }
   .ne-wrap .nglist li {
     width: 100%;
@@ -507,22 +567,3 @@ body>.snow {
 .popup .top_nav a.guanbi { width:16px; height: 16px; display: block; position:absolute;top:10px;right:10px;cursor:pointer;}
 .popup .top_nav a.guanbi span { display: none;}
 .popup .min{width:260px;height:auto;padding:10px;}
-
-/** 圣诞帽 **/
-.hat11{
-  content: "";
-  width: 24px;
-  height: 24px;
-  float: right;
-  right: 100px;
-  background: url(../img/me/santa-hat.svg) no-repeat;
-  background-size: 24px;
-  padding: 6% 1.5%;
-  display: inline;
-}
-
-.music-icon .iconfont {
-  color: #FFFFFF;
-  font-size: 64px;
-  line-height: 1;
-}
