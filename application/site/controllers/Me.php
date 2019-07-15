@@ -22,7 +22,7 @@ class Me extends Common_Controller
         $index['link'] = json_decode($index['link'], true);
         $data['index'] = $index;
         //文章列表
-        $article = $this->db->where('admin_id', 3)->order_by('id', 'DESC')->select("id,title,tag,FROM_UNIXTIME(create_time,'%Y%m') months")->get('article')->result_array();
+        $article = $this->db->where('admin_id', 3)->order_by('id', 'DESC')->select("id,title,tag,FROM_UNIXTIME(create_time,'%Y%m') months")->get('article')->limit(6)->result_array();
     
         $tag = array();
         $dateList = [];
