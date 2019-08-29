@@ -3,19 +3,20 @@
     <a href="https://sakura.adomikao.com/doc/LogoMakr_5gs4TL.png" target="_blank"><img src="doc/LogoMakr_5gs4TL.png" width="700px"></a>
 </div>
 
-<div id="" align="center">
+##  介紹
+<div id="" align="">
 Sakura is a beautiful blog to record the nice anime with essay and anime pictures.
 </div>
 
-##  website
-[Visit the sakura website](https://sakura.adomikao.com) for more detail.
+##  網站
+[Visit the sakura](https://sakura.adomikao.com) for more detail.
 
-## show
+## 展示
 <div align="center">
     <a href="https://sakura.adomikao.com/doc/2019-03-06_114645.png" target="_blank"><img src="doc/2019-03-06_114645.png" ></a>
 </div>
 
-## content
+## 列表
 
 - [月色真美](https://sakura.adomikao.com/me/aimer/7g4z0v9ld)
 
