@@ -12,10 +12,11 @@
     <meta http-equiv="content-language" content="zh-CN"/>
     <title><?php echo $this->config->item('title_suffix'); ?> </title>
     <meta name="copyright" content="2012"/>
+    <link rel="shortcut icon" href="/public/upload/sakura.ico" type="image/png">
     <link rel="canonical" href="/"/>
     <meta name="author" content="Adomikao | 余永健-https://adomikao.com/"/>
     <meta name="robots" content="deny"/>
-    <link rel="shortcut icon" href="https://adomikao.com/wp-content/uploads/2017/12/red.png" type="image/png">
+    <link rel="shortcut icon" href="public/upload/sakura.ico" type="image/png">
     <script type="text/javascript" charset="utf-8">
         //  初始化路径
         var STATIC_URL = "<?php echo STATIC_URL  ?>";
@@ -62,7 +63,7 @@
             <div class="container">
                 <ul class="nav-logo pull-left">
                     <li>
-<!--                        <a href="http://adomikao.com/" target="_blank"><img src="https://qaq.adomikao.com/public/upload/moon.png" width = 16px height = 16px></a>-->
+                        <a href="/" target="_blank"><img src="/public/upload/sakura.ico" width = 16px height = 16px></a>
                     </li>
                     <li>
                         <a href="<?php echo site_url() ?>"> <?php echo $this->config->item('title_suffix'); ?> </a></li>

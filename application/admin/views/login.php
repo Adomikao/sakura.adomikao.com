@@ -8,10 +8,9 @@
     <meta http-equiv="content-language" content="zh-CN"/>
     <title> <?php echo $title . $this->config->item('title_suffix'); ?> </title>
     <meta name="copyright" content="2012"/>
-    <link rel="shortcut icon" href="<?php echo IMG_URL; ?>icon.png" type="image/x-icon"/>
     <link rel="canonical" href="/"/>
     <meta name="author" content="余永健 | Adomikao-https://adomikao.com/"/>
-    <link rel="shortcut icon" href="https://adomikao.com/wp-content/uploads/2016/08/cropped-snow_70.912386706949px_1196812_easyicon.net_-1.png" type="image/png">
+    <link rel="shortcut icon" href="https://sakura.adomikao.com/public/upload/sakura.ico">
 
     <meta name="robots" content="deny"/>
     <script type="text/javascript" charset="utf-8">

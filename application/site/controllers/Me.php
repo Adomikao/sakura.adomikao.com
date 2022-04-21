@@ -22,7 +22,7 @@ class Me extends Common_Controller
         $index['link'] = json_decode($index['link'], true);
         $data['index'] = $index;
         //文章列表
-        $article = $this->db->where('admin_id', 3)->order_by('id', 'DESC')->select("id,title,tag,FROM_UNIXTIME(create_time,'%Y%m') months")->get('article')->limit(6)->result_array();
+        $article = $this->db->where('admin_id', 3)->order_by('id', 'DESC')->select("id,title,tag,FROM_UNIXTIME(create_time,'%Y%m') months")->limit(6)->get('article')->result_array();
     
         $tag = array();
         $dateList = [];
@@ -38,13 +38,11 @@ class Me extends Common_Controller
         foreach ($article as &$value){
             $value['id'] = obj_hashids()->encode($value['id']);
         }
-        $data['article'] = array_slice($article, 0, 5);
+        // $data['article'] = array_slice($article, 0, 5);
+        $data['article'] = $article;
         $data['tagName'] = $tagName;
         $data['date'] = $dateList;
-    
-        
-
-
+        // exit(print_r($data));
         $this->load->view('me', $data);
     }
 

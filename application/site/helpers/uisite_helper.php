@@ -5,10 +5,8 @@ if (!function_exists('tag_photo')) {
     function tag_photo($id, $column = 'url')
     {
         static $a = array();
-
         $id = intval($id);
         if (!isset($a[$id])) {
-
             $CI = &get_instance();
             $CI->load->database();
             $a[$id] = $CI->db->get_where('upload', array('id' => $id));

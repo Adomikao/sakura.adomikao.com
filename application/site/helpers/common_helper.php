@@ -122,13 +122,15 @@ if (!function_exists('upload_file')) {
     function upload_file($url)
     {
         if(IS_GITEE){
-            return GITEE_SAKURA_URL . $url;
+            return SAKURA_GITEE_URL . $url;
         }else{
             return UPLOAD_URL . $url;
         }
         
     }
 }
+
+
 if (!function_exists('weibo_share')) {
 
     function weibo_share($url,$title,$pic){

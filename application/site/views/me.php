@@ -10,7 +10,7 @@
     <!-- sakura -->
     <?php include_once VIEWPATH . 'inc/sakura.php'; ?>
     <div class="ne-wrap">
-        <div><H1 style="text-align: center" class="">その年に一緒に見たアニメ  <a href="/" class="f_logo">of Sakura</a></H1></div>
+        <div><H1 style="text-align: center">その年に一緒に見たアニメ  <a href="/" class="f_logo">of Sakura</a></H1></div>
     	<!--<div class="logo f-cb"><a href="https://adomikao.com"><img src="<?php echo $index['logo']; ?> " width="190" height="60" alt="" class="fr"></a></div>-->
     	<div class="ban">
     		<img src="<?php echo $index['cover']; ?> " width="100%" alt="" style="border: 3px solid rgb(255,230,229); border-radius:5px">

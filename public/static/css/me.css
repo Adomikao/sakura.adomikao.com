@@ -9,14 +9,8 @@
 
 @font-face {
   font-family: "华文中宋";
-  src: url(../font/华文中宋.ttf);
-  /* src: local('华文中宋'), local('华文中宋'), url(../font/华文中宋.ttf); */
-}
+  src:local('华文中宋'), url('../font/瘦金体.ttf') format('truetype');
 
-@font-face {
-  font-family: "瘦金体";
-  src: url(../font/瘦金体.ttf);
-  /* src: local('华文中宋'), local('华文中宋'), url(../font/华文中宋.ttf); */
 }
 
 @font-face {
@@ -26,28 +20,12 @@
   src: local('satisfy'), local('satisfy'), url(../font/satisfy.woff) format('woff')
 }
 
-@font-face{
-  font-family:'HuaweiFont-Regular';
-  src:url('../font/HuaweiFont-Regular.woff2') format('woff2'),
- url('../font/HuaweiFont-Regular.woff') format('woff'),
- url('../font/HuaweiFont-Regular.otf') format('opentype');
-  font-style:normal;
-  font-weight:500
-}
-
-
-
-
-
 .hwzs{
-  font-family: "华文中宋";
-}
-.sjt{
-  font-family: "瘦金体";
+  font-family: Centaur, Arial, "华文中宋", "微软雅黑";
 }
 
 html, body {
-  /*background-color: #878787;*/
+  /* background-color: #878787; */
 background-image: url("/public/upload/bj.png");
 }
 
@@ -55,6 +33,7 @@ a{
   color: #353535;
 }
 
+/**自定义字体**/
 .f_logo{
   font: normal 20px 'satisfy', 'Helvetica Neue', Helvetica, Arial;
 }
@@ -67,7 +46,7 @@ a{
   min-width: 800px;
   margin: 0 auto;
   background-color: #fff;
-  font-family: Centaur, Arial, "华文中宋", "微软雅黑";
+  font-family: "华文中宋", "微软雅黑";
 }
 .ne-wrap .signtop {
   position: absolute;
@@ -79,7 +58,7 @@ a{
 }
 
 .ne-wrap .logo .tips {
-  font-weight: bold;
+  /*font-weight: bold;*/
   font-size: 25px;
   line-height: 50px;
   color: #666;
@@ -260,14 +239,12 @@ a{
   line-height: 1.5;
   color: #333;
   text-align: center;
-
 }
 .neinfo-wrap .part.part-left tr.info {
   display: inline-block;
   position: relative;
   overflow: hidden;
   height: 22.5vh;
-
 }
 .neinfo-wrap .part.part-left tr.info td {
   position: relative;
@@ -278,7 +255,6 @@ a{
   font-size: 14px;
   line-height: 1.5;
   color: #666;
-
 }
 .neinfo-wrap .part.part-left tr.info td:nth-child(2) {
   padding-right: 0;
@@ -376,7 +352,6 @@ a{
   font-size: 14px;
   line-height: 2;
   color: #666;
-  /* font-family: "华文中宋"; */
 }
 .m-wrap h2 {
   /*margin-bottom: 10%;*/
@@ -397,7 +372,6 @@ a{
 }
 
 @media all and (max-width: 812px) {
-
   html, body {
     overflow: visible!important;
     height: auto!important;
@@ -410,11 +384,9 @@ a{
   .ne-wrap .list .box {
     margin-bottom: 5%;
   }
-
-  .ne-wrap .list .box:nth-child(1) {
-    width: 50%;
+   .ne-wrap .list .box:nth-child(1) {
+    width: 55%;
   }
-
   .ne-wrap .list .box:nth-child(2) {
     width: 95%;
   }

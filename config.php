@@ -1,31 +1,30 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: yuyongjian
- * Date: 2019/2/26
- * Time: 14:12
+ * User: zhaoss
+ * Date: 2018/5/8
+ * Time: 16:30
  */
 
-//数据库
-define('DB_TYPE','mysqli');
-define('DB_HOST','127.0.0.1');
-define('DB_USER','root');
-define('DB_PASS','root');
-define('DB_NAME','adomikao_wp209');
-define('DB_PREFIX','qaq_');
+# 数据库
+define('DB_TYPE', 'mysqli');
+define('DB_HOST', '127.0.0.1');
+define('DB_USER', 'root');
+// define('DB_PASS', '9r-1t@9SgP');
+define('DB_PASS', '123456');
+define('DB_NAME', 'adomikao_wp209');
+define('DB_PREFIX', 'qaq_');
 
-
-//全局URL路径
+# 全局URL路径
 define('GLOBAL_URL'  , 'http://'.$_SERVER['HTTP_HOST'].'/');
 define('ADMINER_URL', GLOBAL_URL . 'moon/');
 define('STATIC_URL', GLOBAL_URL . 'public/static/');
 define('UPLOAD_URL', GLOBAL_URL . 'public/upload/');
 define('IMG_URL', STATIC_URL . 'img/');
-define('ADMINER_IMG_URL', STATIC_URL . 'adminer/img');
+define('SAKURA_GITEE_URL','https://adomikao.gitee.io/media/sakura/');
+define('IS_GITEE',false);
 
-
-
-// 绝对路径PATH
+# 引用绝对路径PATH定义
 define('ROOT', __DIR__ . '/');
 define('CI_PATH', ROOT . 'system');
 define('STATIC_PATH', ROOT . 'public/static/');
@@ -39,8 +38,6 @@ define('HMACPWD', 'SA1S2D3F4G5H6J7K8L9');
 
 //define('ENVIRONMENT', 'production');
 define('ENVIRONMENT', 'development');
-
-
 
 function autoLoader($class)
 {

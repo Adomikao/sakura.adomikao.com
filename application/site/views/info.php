@@ -8,7 +8,6 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_743220_bwms5wr4z36.css">
 <link rel="stylesheet" href="//at.alicdn.com/t/font_676531_f9yg4moqy9j2a9k9.css">
 <link rel="stylesheet" href="//at.alicdn.com/t/font_761408_oep14xapnf.css">
-
 <style>
 html, body {
     position: relative;
@@ -157,9 +156,7 @@ html, body {
                 <?php $j++;?>
             <?php endif;?>
             <?php endwhile;?>
-            <br/><br/>
-            <!-- Jan 17, 2019 at 08:41 pm -->
-            <p> 本文由 <a href="https://adomikao.com" target="_blank">Adomikao</a> 创作，采用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external nofollow">知识共享署名4.0</a> 国际许可协议进行许可<br>本站文章除注明转载/出处外，均为本站原创或翻译，转载前请务必署名<br>最后编辑时间为: <?php echo date("M d l, Y", $update_time);?>  at <?php echo date("H:i", $update_time);?> </p>
+            <p><hr> 本文由 <a href="https://sakura.adomikao.com">Adomikao</a> 创作，采用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external nofollow">知识共享署名4.0</a> 国际许可协议进行许可<br>最后编辑时间为: <?php echo date("M d l, Y", $update_time);?>  at <?php echo date("H:i", $update_time);?> </p>
     	</div>
     </div>
     <div class="out-image">
@@ -601,5 +598,6 @@ $(function(){
         $(".popup").css({top: _top, left: _left});
     }
 </script>
+
 </body>
 </html>
