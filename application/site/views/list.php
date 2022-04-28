@@ -19,7 +19,6 @@
     <div class="ne-wrap">
     	<div class="logo f-cb">
             <div class="tips fl"><?php echo $search;?></div>
-            <!--<a href="https://qaq.adomikao.com"><img src="<?php echo static_file('img/me/logo.png'); ?> " width="190" height="60" alt="" class="fr"></a>-->
         </div>
     	<div class="nglist f-cb">
             <ul>
@@ -36,6 +35,7 @@
     </div>
 <script>
 </script>
-<script src="https://adomikao.com/wp-content/themes/sparkling/inc/js/customs.min.js" async="" defer=""></script>
+<!-- 雪花 -->
+<?php echo static_file('js/snow.js'); ?>
 </body>
 </html>
