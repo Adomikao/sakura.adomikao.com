@@ -14,7 +14,7 @@
     <meta name="copyright" content="2012"/>
     <link rel="shortcut icon" href="/public/upload/sakura.ico" type="image/png">
     <link rel="canonical" href="/"/>
-    <meta name="author" content="Adomikao | 余永健-https://adomikao.com/"/>
+    <meta name="author" content="Adomikao | 余永健-<?php echo GLOBAL_URL ?>"/>
     <meta name="robots" content="deny"/>
     <link rel="shortcut icon" href="public/upload/sakura.ico" type="image/png">
     <script type="text/javascript" charset="utf-8">
