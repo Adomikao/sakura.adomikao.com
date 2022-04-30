@@ -6,18 +6,12 @@
 <meta name="format-detection" content="telephone=no"/>
 <meta name="keywords" content=""/>
 <meta name="description" content="页面描述"/>
-<meta name="author" content="Adomikao-http://adomikao.com/"/>
+<meta name="author" content="Adomikao-<?php echo GLOBAL_URL ?>"/>
 <meta name="renderer" content="webkit">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 <link rel="shortcut icon" href="/public/upload/favicon.ico"/> 
 <title><?php echo $this->seoTitle;?></title>
 
-<!-- <link href="https://adomikao.gitee.io/media/sakura/static/css/reset.css" rel="stylesheet" type="text/css"/>
-<link href="https://adomikao.gitee.io/media/sakura/static/css/jquery.mCustomScrollbar.min.css" rel="stylesheet" type="text/css"/>
-<script src="https://adomikao.gitee.io/media/sakura/static/js/jQuery.js"></script>
-<script src="https://adomikao.gitee.io/media/sakura/static/js/aiyufe.js"></script>
-<script src="https://adomikao.gitee.io/media/sakura/static/js/jquery.mousewheel.js"></script>
-<script src="https://adomikao.gitee.io/media/sakura/static/js/jquery.mCustomScrollbar.concat.min.js"></script> -->
 <?php
 echo static_file('css/reset.css');
 echo static_file('css/jquery.mCustomScrollbar.min.css');
