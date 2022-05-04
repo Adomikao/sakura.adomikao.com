@@ -9,9 +9,12 @@
 <body>
     <!-- sakura -->
     <?php include_once VIEWPATH . 'inc/sakura.php'; ?>
+    <!-- end -->
     <div class="ne-wrap">
-        <div><H1 style="text-align: center">その年に一緒に見たアニメ  <a href="/" class="f_logo">of Sakura</a></H1></div>
-    	<!--<div class="logo f-cb"><a href="https://adomikao.com"><img src="<?php echo $index['logo']; ?> " width="190" height="60" alt="" class="fr"></a></div>-->
+        <!-- 首页音乐 -->
+        <?php $music = "樱花樱花想见你";  include_once VIEWPATH . 'inc/music.php';?>
+        <!-- end -->
+        <div><h1 style="text-align: center">その年に一緒に見たアニメ <a href="/" class="f_logo">of Sakura</a></h1></div>
     	<div class="ban">
     		<img src="<?php echo $index['cover']; ?> " width="100%" alt="" style="border: 3px solid rgb(255,230,229); border-radius:5px">
     	</div>
@@ -44,10 +47,17 @@
     		</div>
     	
     	</div>
+        <div class="beian">
+            <a href=""><h2>浙ICP备16032746号-1</h2></a>
+        </div>
     </div>
 <script>
 </script>
-<script src="https://adomikao.com/wp-content/themes/sparkling/inc/js/customs.min.js" async="" defer=""></script>
+
+<!-- 雪花 -->
+<?php echo static_file('js/snow.js'); ?>
+
+<!-- 心知天气 -->
 <script>(function(T,h,i,n,k,P,a,g,e){g=function(){P=h.createElement(i);a=h.getElementsByTagName(i)[0];P.src=k;P.charset="utf-8";P.async=1;a.parentNode.insertBefore(P,a)};T["ThinkPageWeatherWidgetObject"]=n;T[n]||(T[n]=function(){(T[n].q=T[n].q||[]).push(arguments)});T[n].l=+new Date();if(T.attachEvent){T.attachEvent("onload",g)}else{T.addEventListener("load",g,false)}}(window,document,"script","tpwidget","//widget.seniverse.com/widget/chameleon.js"))</script>
 <script>tpwidget("init", {
     "flavor": "bubble",
@@ -62,5 +72,7 @@
     "hash": "78d059be9e9137cea99bf6381d783124"
 });
 tpwidget("show");</script>
+
+
 </body>
 </html>
