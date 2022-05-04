@@ -9,7 +9,7 @@
 	<meta name="copyright" content="2012" />
 	<link rel="shortcut icon" href="<?php echo IMG_URL; ?>icon.png" type="image/x-icon"/>
 	<link rel="canonical" href="/"/>
-	<meta name="author" content="余永健 | Adomikao-http://adomikao.com/" />
+	<meta name="author" content="余永健 | Adomikao-<?php echo GLOBAL_URL ?>" />
 	<meta name="robots" content="deny" />
 	<script type="text/javascript" charset="utf-8">
 	//  初始化路径
