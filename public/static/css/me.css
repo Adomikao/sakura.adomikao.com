@@ -48,13 +48,10 @@ a{
   background-color: #fff;
   font-family: "华文中宋", "微软雅黑";
 }
-.ne-wrap .signtop {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 25px;
-  height: 20px;
-  background: url(../img/me/signtop.jpg) no-repeat center;
+
+.beian{
+  float: right;
+  margin-top: 20px;
 }
 
 .ne-wrap .logo .tips {
@@ -107,7 +104,9 @@ a{
   padding-top: 50px;
 }
 .ne-wrap .nglist li {
-  float: left;
+
+  /* 这里以后要改 */
+  /* float: left; */
   width: 48%;
   margin-bottom: 35px;
 }
@@ -534,7 +533,7 @@ body>.snow {
 	position:relative;
 }
 .popup .top_nav i{width:35px;height:35px;position:absolute;top:6px;left:8px;display:block; }
-.popup .top_nav span{font:18px/18px 'microsoft yahei';display:block;position:absolute;top:13px;left:50px;}
+.popup .top_nav span{font-size: 16px;display:block;position:absolute;top:13px;left:50px;}
 
 .popup .top_nav a.guanbi { width:16px; height: 16px; display: block; position:absolute;top:10px;right:10px;cursor:pointer;}
 .popup .top_nav a.guanbi span { display: none;}
