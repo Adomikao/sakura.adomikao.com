@@ -124,7 +124,7 @@ html, body {
         <a class="guanbi" style="color: black">×</a>
     </div>
     <div class="min">
-        <div align="center"><img src='<?php echo $wechat_share;?>' width="185" height="185"/>
+        <div align="center"><img src='<?php echo $wechat_share;?>'/>
         </div>
         <div class="bd_weixin_popup_foot"
              style="font-size: 12px;text-align: left;line-height: 22px;color: #666;padding-top:15px;">
@@ -156,7 +156,7 @@ html, body {
                 <?php $j++;?>
             <?php endif;?>
             <?php endwhile;?>
-            <p><hr> 本文由 <a href="https://sakura.adomikao.com">Adomikao</a> 创作，采用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external nofollow">知识共享署名4.0</a> 国际许可协议进行许可<br>最后编辑时间为: <?php echo date("M d l, Y", $update_time);?>  at <?php echo date("H:i", $update_time);?> </p>
+            <p><hr style="height:5px;border:none;border-top:2px dotted pink;"/>本文由 <a href="https://sakura.adomikao.com">Adomikao</a> 编辑<br>最后编辑时间为: <?php echo date("M d l, Y", $update_time);?>  at <?php echo date("H:i", $update_time);?> </p>
     	</div>
     </div>
     <div class="out-image">
@@ -574,7 +574,10 @@ $(function(){
     };
 })
 </script>
-<script src="https://adomikao.com/wp-content/themes/sparkling/inc/js/customs.min.js" async="" defer=""></script>
+
+<!-- 雪花 -->
+<?php echo static_file('js/snow.js'); ?>
+
 <script type="text/javascript">
     //窗口效果
     //点击登录class为tc 显示
