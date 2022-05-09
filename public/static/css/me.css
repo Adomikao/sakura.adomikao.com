@@ -6,10 +6,10 @@
   width: 100%;
   height: 100%;
 }
-
+/* https://adomikao.gitee.io/media/sakura/static/font/瘦金体.ttf */
 @font-face {
   font-family: "华文中宋";
-  src:local('华文中宋'), url('../font/瘦金体.ttf') format('truetype');
+  src:local('华文中宋'), url('https://cdn.jsdelivr.net/gh/adomikao/CDN@0.0/fonts/瘦金体.ttf') format('truetype');
 
 }
 
@@ -18,7 +18,7 @@
   font-style: normal;
   font-weight: 400;
   src: local('satisfy'), local('satisfy'), url(../font/satisfy.woff) format('woff')
-}
+} 
 
 .hwzs{
   font-family: Centaur, Arial, "华文中宋", "微软雅黑";
