@@ -10,7 +10,7 @@
     <meta name="copyright" content="2012"/>
     <link rel="canonical" href="/"/>
     <meta name="author" content="余永健 | Adomikao-https://adomikao.com/"/>
-    <link rel="shortcut icon" href="https://sakura.adomikao.com/public/upload/sakura.ico">
+    <link rel="shortcut icon" href= "<?php echo UPLOAD_URL ?>sakura.ico">
 
     <meta name="robots" content="deny"/>
     <script type="text/javascript" charset="utf-8">
