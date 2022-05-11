@@ -6,14 +6,15 @@ if (!isset($title)) {
 include_once 'inc_header.php';
 
 if (!!function_exists('site_url') and !function_exists('to_url')) {
+	//正则表达式里面有一个横杠[\w-]+而服务器线上是PHP7.1，而本地是PHP7.3。使用PHPpreg_quote转义试一下，结果发现，是输出\-。再测试PHP7.1，果然也是，但奇怪的是，PHP7.1并没有报这个错误。
 	function to_url($str){
-		return (bool) (!preg_match('/^(http:\/\/)?(https:\/\/)?([\w\d-]+\.)+[\w-]+(\/[\d\w-.\/?%&=]*)?$/' , $str)) ? site_url($str) : $str;
+		return (bool) (!preg_match('/^(http:\/\/)?(https:\/\/)?([\w\d\-]+\.)+[\w\-]+(\/[\d\w\-.\/?%&=]*)?$/' , $str)) ? site_url($str) : $str;
 	}
 }
 
 if (!function_exists('to_url')) {
 	function to_url($str){
-		 return (bool) (!preg_match('/^(http:\/\/)?(https:\/\/)?([\w\d-]+\.)+[\w-]+(\/[\d\w-.\/?%&=]*)?$/' , $str)) ? site_url($str) : $str;
+		 return (bool) (!preg_match('/^(http:\/\/)?(https:\/\/)?([\w\d\-]+\.)+[\w\-]+(\/[\d\w\-.\/?%&=]*)?$/' , $str)) ? site_url($str) : $str;
 	}
 }
 
