@@ -12,7 +12,7 @@
     <!-- end -->
     <div class="ne-wrap">
         <!-- 首页音乐 -->
-        <?php $music = "像魚";  include_once VIEWPATH . 'inc/music.php';?>
+        <?php include_once VIEWPATH . 'inc/music.php';?>
         <!-- end -->
         <div><h1 style="text-align: center">その年に一緒に見たアニメ <a href="/" class="f_logo">of Sakura</a></h1></div>
     	<div class="ban">
