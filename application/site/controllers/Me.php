@@ -1,6 +1,5 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
 class Me extends Common_Controller
 {
     public $defaultLogo;
@@ -9,8 +8,6 @@ class Me extends Common_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->defaultLogo = static_file('img/me/logo.png');
-        $this->defaultCover = static_file('img/me/ban.jpg');
     }
 
     public function index()
@@ -22,7 +19,7 @@ class Me extends Common_Controller
         $index['link'] = json_decode($index['link'], true);
         $data['index'] = $index;
         //文章列表
-        $article = $this->db->where('admin_id', 3)->order_by('id', 'DESC')->select("id,title,tag,FROM_UNIXTIME(create_time,'%Y%m') months")->limit(6)->get('article')->result_array();
+        $article = $this->db->where('admin_id', 3)->order_by('id', 'DESC')->select("id,title,tag,FROM_UNIXTIME(create_time,'%Y%m') months")->get('article')->result_array();
     
         $tag = array();
         $dateList = [];
@@ -38,11 +35,15 @@ class Me extends Common_Controller
         foreach ($article as &$value){
             $value['id'] = obj_hashids()->encode($value['id']);
         }
-        // $data['article'] = array_slice($article, 0, 5);
         $data['article'] = $article;
         $data['tagName'] = $tagName;
         $data['date'] = $dateList;
-        // exit(print_r($data));
+        //主页音乐
+        $music = ['丁当-猜不透','林俊杰-记得'];
+        $days = date('Y/m/d', time());
+        $days = explode('/', $days);
+        $musicIndex = intval($days[2]%2);
+        $data['music'] = $music[$musicIndex];
         $this->load->view('me', $data);
     }
 
@@ -139,8 +140,8 @@ class Me extends Common_Controller
         $this->seoTitle = $article['title'] .' - ' .$this->seoTitle;
         $article['weibo_share'] = weibo_share(current_url(),$this->seoTitle,upload_file(tag_photo($article['photo'])));
         $article['qq_share'] = qq_share(current_url(),$this->seoTitle,upload_file(tag_photo($article['photo'])),strip_tags($article['intro_left']));
-        $qr_code = qr_code(current_url());
-        $article['wechat_share'] = $qr_code;
+        qrcode(current_url()); //生成二维码图片
+        $article['wechat_share'] = UPLOAD_URL . 'wxshare.png';
         $this->load->view('info', $article);
     }
 }
