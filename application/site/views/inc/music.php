@@ -60,12 +60,12 @@
 <!--代码部分begin-->
 <div id="music">
     <div id="audio-btn" class="off" onclick="music.changeClass(this,'media')">
-        <audio loop="loop" src="<?php echo UPLOAD_URL . "music/{$music}.mp3"; ?>" id="media" preload=""></audio>
+        <audio loop="loop" src="<?php echo UPLOAD_URL . "music/{$music}.mp3"; ?>" id="media" preload="preload"></audio>
     </div>
 </div>
 <script>
     document.getElementById('media').load();
-    document.getElementById('media').play();
+    // document.getElementById('media').play();
     var music = {
         changeClass: function(target, id) {
             var className = $(target).attr('class');
@@ -79,5 +79,5 @@
             document.getElementById('media').play();
         }
     }
-    music.play();
+    // music.play();
 </script>
