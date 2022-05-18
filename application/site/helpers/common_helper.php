@@ -131,6 +131,22 @@ if (!function_exists('upload_file')) {
 }
 
 
+/**
+ *  生成链接的二维码
+ */
+function qrcode ($url = ''){
+    $CI = &get_instance();
+    $CI->load->library('qrcode');
+    $el =  'L' ;
+	$w = 8;  
+	$m = 2; 
+    QRcode::png($url, './public/upload/wxshare.png', $el, $w, $m); 
+}
+
+
+/**
+ * 分享链接
+ */
 if (!function_exists('weibo_share')) {
 
     function weibo_share($url,$title,$pic){
